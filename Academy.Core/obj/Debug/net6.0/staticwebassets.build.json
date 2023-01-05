@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "lZkvvEj/Zl4Nx66njdoEWxk3erpGNXV4ZGZztUD6CrY=",
+  "Source": "Academy.Core",
+  "BasePath": "_content/Academy.Core",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj",
+      "Version": 2,
+      "Source": "Academy.Domain",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
