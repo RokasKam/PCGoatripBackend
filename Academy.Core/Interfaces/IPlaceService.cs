@@ -5,7 +5,7 @@ namespace Academy.Core.Interfaces;
 
 public interface IPlaceService
 {
-    List<PlaceResponse> GetAll();
+    List<PlaceResponse> GetAll(PlacesParameters placesParameters);
 
     PlaceResponse? GetById(Guid id);
 

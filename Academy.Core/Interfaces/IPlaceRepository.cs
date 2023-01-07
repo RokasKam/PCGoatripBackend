@@ -1,3 +1,4 @@
+using Academy.Core.Requests.Place;
 using Academy.Domain.Entities;
 
 namespace Academy.Core.Interfaces;
@@ -5,8 +6,10 @@ namespace Academy.Core.Interfaces;
 public interface IPlaceRepository
 {
     Place? GetById(Guid id);
-
-    IEnumerable<Place> GetAll();
+    
+    Place? GetByName(string name);
+    
+    IEnumerable<Place> GetAll(PlacesParameters placesParameters);
 
     Place? Create(Place place);
     

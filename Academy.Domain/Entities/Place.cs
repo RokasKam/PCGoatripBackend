@@ -7,7 +7,8 @@ public enum Category
     Restaurant,
     Hotel,
     Museum,
-    Outdoor
+    Outdoor,
+    All
 }
 public class Place : BaseEntity
 {

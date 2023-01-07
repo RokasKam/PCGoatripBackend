@@ -18,9 +18,9 @@ public class PlaceService : IPlaceService
         _mapper = mapper;
         _imageService = imageService;
     }
-    public List<PlaceResponse> GetAll()
+    public List<PlaceResponse> GetAll(PlacesParameters placesParameters)
     {
-        var places = _placeRepository.GetAll();
+        var places = _placeRepository.GetAll(placesParameters);
         var placesResponseList = places.Select(x => _mapper.Map<PlaceResponse>(x)).ToList();
 
         return placesResponseList;
@@ -37,7 +37,7 @@ public class PlaceService : IPlaceService
     public async Task<PlaceResponse> Create(CreatePlaceRequest place)
     {
         var requestPlace = _mapper.Map<Place>(place);
-        if (_placeRepository.GetAll().FirstOrDefault(x => x.PlaceName == requestPlace.PlaceName) != null)
+        if (_placeRepository.GetByName(place.PlaceName) != null)
         {
             throw new Exception("Place with this name exist");
         }

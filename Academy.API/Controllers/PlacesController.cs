@@ -14,9 +14,9 @@ public class PlaceController : BaseController
     }
     
     [HttpGet]
-    public IActionResult GetAll()
+    public IActionResult GetAll([FromQuery] PlacesParameters placesParameters)
     {
-        return Ok(_placeService.GetAll());
+        return Ok(_placeService.GetAll(placesParameters));
     }
 
     [HttpGet("{id:guid}")]

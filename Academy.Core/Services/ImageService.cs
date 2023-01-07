@@ -6,10 +6,10 @@ namespace Academy.Core.Services;
 
 public class ImageService : IImageService
 {
-    private string _firebaseStorageApiKey = "";
-    private string _firebaseStorageAuthEmail = "";
-    private string _firebaseStorageAuthPassword = "";
-    private string _firebaseStorageBucket = "";
+    private string _firebaseStorageApiKey = "AIzaSyDA_zFqAgTsB46UI5j2POsA8y6Rzd0__qw";
+    private string _firebaseStorageAuthEmail = "admin@goatrip.com";
+    private string _firebaseStorageAuthPassword = "Pa$$w0rd";
+    private string _firebaseStorageBucket = "goatrip-a93b5.appspot.com";
     
     public Stream ConvertBase64ToStream(string imageFromRequest)
     {

@@ -1,4 +1,5 @@
 using Academy.Core.Interfaces;
+using Academy.Core.Requests.Place;
 using Academy.Domain.Entities;
 using Academy.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +20,29 @@ public class PlaceRepository : IPlaceRepository
 
         return place;
     }
-
-    public IEnumerable<Place> GetAll()
+    
+    public Place? GetByName(string name)
     {
-        var entities = _dbContext.Places.ToList();
+        var place = _dbContext.Places.FirstOrDefault(x => x.PlaceName == name);
 
-        return entities;
+        return place;
+    }
+    
+    public IEnumerable<Place> GetAll(PlacesParameters placesParameters)
+    {
+        
+        IQueryable<Place> entities = _dbContext.Places;
+
+        if (placesParameters.FilteringCategory != Category.All)
+        {
+            entities = entities.Where(i => i.Category == placesParameters.FilteringCategory);
+        }
+        entities = entities
+            .OrderByDescending(x => x.Rating)
+            .Skip((placesParameters.PageNumber - 1) * placesParameters.PageSize)
+            .Take(placesParameters.PageSize);
+
+        return entities.ToList();
     }
 
     public Place? Create(Place place)
