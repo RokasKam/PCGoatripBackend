@@ -14,4 +14,6 @@ public interface IPlaceService
     PlaceResponse Update(Guid id, UpdatePlaceRequest place);
 
     void Delete(Guid id);
+
+    List<string> GetSuggestions(SearchSuggestionsRequest searchSuggestionsRequest);
 }

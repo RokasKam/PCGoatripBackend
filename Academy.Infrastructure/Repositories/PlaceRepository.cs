@@ -1,6 +1,7 @@
 using Academy.Core.Interfaces;
 using Academy.Core.Requests.Place;
 using Academy.Domain.Entities;
+using Academy.Domain.Exceptions;
 using Academy.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,8 +36,15 @@ public class PlaceRepository : IPlaceRepository
 
         if (placesParameters.FilteringCategory != Category.All)
         {
-            entities = entities.Where(i => i.Category == placesParameters.FilteringCategory);
+            entities = entities
+                .Where(i => i.Category == placesParameters.FilteringCategory);
         }
+        if (placesParameters.SearchPhrase != "")
+        {
+            entities = entities
+                .Where(x => x.PlaceName.ToLower().Contains(placesParameters.SearchPhrase.ToLower()));
+        }
+        
         entities = entities
             .OrderByDescending(x => x.Rating)
             .Skip((placesParameters.PageNumber - 1) * placesParameters.PageSize)
@@ -79,10 +87,20 @@ public class PlaceRepository : IPlaceRepository
 
         if (place is null)
         {
-            throw new Exception("Place not found");
+            throw new ValidationException("Place not found");
         }
 
         _dbContext.Places.Remove(place);
         _dbContext.SaveChanges();
+    }
+
+    public IEnumerable<string> GetSuggestions(SearchSuggestionsRequest searchSuggestionsRequest)
+    {
+        var searchPhrase = searchSuggestionsRequest.SearchPhrase.ToLower();
+        var suggestions = _dbContext.Places
+            .Where(x => x.PlaceName.ToLower().Contains(searchPhrase))
+            .Select(x => x.PlaceName)
+            .ToList();
+        return suggestions;
     }
 }

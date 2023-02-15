@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.API/Academy.API.csproj": {}
+    "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.API/Academy.API.csproj": {}
   },
   "projects": {
-    "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.API/Academy.API.csproj": {
+    "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.API/Academy.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.API/Academy.API.csproj",
+        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.API/Academy.API.csproj",
         "projectName": "Academy.API",
-        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.API/Academy.API.csproj",
+        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.API/Academy.API.csproj",
         "packagesPath": "/Users/rokaskamblevicius/.nuget/packages/",
-        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.API/obj/",
+        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rokaskamblevicius/.nuget/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj": {
-                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj"
+              "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj": {
+                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj"
               },
-              "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj": {
-                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj"
+              "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj": {
+                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj"
               }
             }
           }
@@ -48,6 +48,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -73,9 +77,17 @@
               "target": "Package",
               "version": "[6.0.12, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
             }
           },
           "imports": [
@@ -101,14 +113,14 @@
         }
       }
     },
-    "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj": {
+    "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj",
+        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj",
         "projectName": "Academy.Core",
-        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj",
+        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj",
         "packagesPath": "/Users/rokaskamblevicius/.nuget/packages/",
-        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/obj/",
+        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rokaskamblevicius/.nuget/NuGet/NuGet.Config"
@@ -123,8 +135,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj": {
-                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj"
+              "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj": {
+                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj"
               }
             }
           }
@@ -150,6 +162,14 @@
             "FirebaseStorage.net": {
               "target": "Package",
               "version": "[1.0.3, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
             }
           },
           "imports": [
@@ -175,14 +195,14 @@
         }
       }
     },
-    "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj": {
+    "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj",
+        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj",
         "projectName": "Academy.Domain",
-        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj",
+        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj",
         "packagesPath": "/Users/rokaskamblevicius/.nuget/packages/",
-        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/obj/",
+        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rokaskamblevicius/.nuget/NuGet/NuGet.Config"
@@ -231,14 +251,14 @@
         }
       }
     },
-    "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj": {
+    "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj",
+        "projectUniqueName": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj",
         "projectName": "Academy.Infrastructure",
-        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj",
+        "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Infrastructure/Academy.Infrastructure.csproj",
         "packagesPath": "/Users/rokaskamblevicius/.nuget/packages/",
-        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Infrastructure/obj/",
+        "outputPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rokaskamblevicius/.nuget/NuGet/NuGet.Config"
@@ -253,11 +273,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj": {
-                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj"
+              "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj": {
+                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj"
               },
-              "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj": {
-                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj"
+              "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj": {
+                "projectPath": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj"
               }
             }
           }
@@ -272,6 +292,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.7.2, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.12, )"

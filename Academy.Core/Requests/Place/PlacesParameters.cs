@@ -5,8 +5,9 @@ namespace Academy.Core.Requests.Place;
 public class PlacesParameters
 {
     const int maxPageSize = 50;
-    
-    public Category FilteringCategory { get; set; }
+
+    public string? SearchPhrase { get; set; } = "";
+    public Category FilteringCategory { get; set; } = Category.All;
     public int PageNumber { get; set; } = 1;
     private int _pageSize = 10;
     public int PageSize

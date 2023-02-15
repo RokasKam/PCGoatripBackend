@@ -16,4 +16,6 @@ public interface IPlaceRepository
     Place? Update(Place place);
     
     void Delete(Guid id);
+
+    IEnumerable<string> GetSuggestions(SearchSuggestionsRequest searchSuggestionsRequest);
 }

@@ -25,4 +25,6 @@ public class Place : BaseEntity
     public double Longtitude { get; set; }
     public double Rating { get; set; }
     public int RatingAmount { get; set; }
+    
+    public List<UserPlace> UserPlaces { get; set; }
 }

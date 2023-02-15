@@ -9,6 +9,10 @@ public class AcademyDataContext : DbContext
 
 public DbSet<Place> Places { get; set; }
 
+public DbSet<User> Users { get; set; }
+
+public DbSet<UserPlace> UserPlaces { get; set; }
+
     public AcademyDataContext(DbContextOptions<AcademyDataContext> options)
         : base(options)
     {

@@ -43,4 +43,10 @@ public class PlaceController : BaseController
         _placeService.Delete(id);
         return Ok();
     }
+    
+    [HttpGet]
+    public IActionResult GetSuggestions([FromQuery] SearchSuggestionsRequest searchSuggestionsRequest)
+    {
+        return Ok(_placeService.GetSuggestions(searchSuggestionsRequest));
+    }
 }

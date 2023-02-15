@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Academy.Infrastructure.Data.Configurations;
 
-public class PlaceConfiguration: IEntityTypeConfiguration<Place>
+public class PlaceConfiguration : IEntityTypeConfiguration<Place>
 {
     public void Configure(EntityTypeBuilder<Place> builder)
     {

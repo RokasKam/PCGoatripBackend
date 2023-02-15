@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "phMcDBEsXEAjPTXorKVazLXm0Q/bbwVVp7+Hi4O5j0c=",
+  "Hash": "Ts7MX9m9B84AFlN4FO3c3u0z7NkMkAd5zuZ73opdrIU=",
   "Source": "Academy.Infrastructure",
   "BasePath": "_content/Academy.Infrastructure",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Core/Academy.Core.csproj",
+      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Core/Academy.Core.csproj",
       "Version": 2,
       "Source": "Academy.Core",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -18,7 +18,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     },
     {
-      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj",
+      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj",
       "Version": 2,
       "Source": "Academy.Domain",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "lZkvvEj/Zl4Nx66njdoEWxk3erpGNXV4ZGZztUD6CrY=",
+  "Hash": "MLbspPmgY6f7MFbMIFKymI/mHO3/+plpW0hR0M4wzfg=",
   "Source": "Academy.Core",
   "BasePath": "_content/Academy.Core",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy-2/Academy/Academy.Domain/Academy.Domain.csproj",
+      "Identity": "/Users/rokaskamblevicius/Documents/Akademija/Academy/Academy.Domain/Academy.Domain.csproj",
       "Version": 2,
       "Source": "Academy.Domain",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

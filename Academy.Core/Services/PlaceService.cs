@@ -2,6 +2,7 @@ using Academy.Core.Interfaces;
 using Academy.Core.Requests.Place;
 using Academy.Core.Responses.Places;
 using Academy.Domain.Entities;
+using Academy.Domain.Exceptions;
 using AutoMapper;
 
 namespace Academy.Core.Services;
@@ -39,7 +40,7 @@ public class PlaceService : IPlaceService
         var requestPlace = _mapper.Map<Place>(place);
         if (_placeRepository.GetByName(place.PlaceName) != null)
         {
-            throw new Exception("Place with this name exist");
+            throw new ValidationException("Place with this name exist");
         }
         Stream imageStream = _imageService.ConvertBase64ToStream(place.PhotoBase64);
         string imageFromFirebase = await _imageService.UploadImage(imageStream, place.PlaceName);
@@ -54,7 +55,7 @@ public class PlaceService : IPlaceService
         var placeToUpdate = _placeRepository.GetById(id);
         if (placeToUpdate is null)
         {
-            throw new Exception("Place with provided id does not exist");
+            throw new ValidationException("Place with provided id does not exist");
         }
         
         if (placeToUpdate.RatingAmount == 0)
@@ -78,5 +79,11 @@ public class PlaceService : IPlaceService
     public void Delete(Guid id)
     {
         _placeRepository.Delete(id);
+    }
+
+    public List<string> GetSuggestions(SearchSuggestionsRequest searchSuggestionsRequest)
+    {
+        var suggestions  = _placeRepository.GetSuggestions(searchSuggestionsRequest).ToList();
+        return suggestions;
     }
 }
